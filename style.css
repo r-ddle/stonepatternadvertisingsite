@@ -1,4 +1,4 @@
-@import 'animate.css';
+@import "animate.css";
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 body {
   background-color: antiquewhite;
   font-family: "Oswald", sans-serif;
-  background-image: url(./assets/stoned.jpg);
+  background-image: url(https://images.unsplash.com/photo-1532467411038-57680e3dc0f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   color: white;
 }
 
@@ -62,19 +62,15 @@ body {
   font-size: 1.2em;
 }
 
-
-
 .corexbar .nav-links a:hover {
-  text-shadow:0 0 5px #7e7e7e;
+  text-shadow: 0 0 5px #7e7e7e;
 }
-.corexbar .nav-links a{
+.corexbar .nav-links a {
   text-decoration: none;
-  color: #c7c7c7; /* Change color to suit your design */
-  font-size: 18px; /* Adjust size as needed */
-  transition: text-shadow 0.3s ease; /* Smooth transition */
+  color: #e6e6e6;
+  font-size: 18px;
+  transition: text-shadow 0.3s ease;
   margin: 0 15px;
-  
-
 }
 
 /* catogory tab */
@@ -88,16 +84,15 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(119, 119, 119, 0.8);
 }
 
-
 /* card layout */
-.gridlayout{
+.gridlayout {
   margin-top: 15px;
   display: grid;
-  grid-template-areas: 
-  "one two three";
+  grid-template-areas: "one two three";
   justify-content: center;
   gap: 60px;
 }
@@ -119,7 +114,7 @@ img {
 .card h1,
 .card p {
   color: white;
-  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 5px 5px rgba(20, 20, 20, 0.8);
 }
 .card {
   transition: all 0.3s ease-in-out;
@@ -146,7 +141,7 @@ img {
 .crystallisedobsidianpattern:hover,
 .pebblestonepattern:hover,
 .perfectpattern:hover,
-.randomizedpattern:hover{
+.randomizedpattern:hover {
   transform: scale(1.1);
 }
 
@@ -155,7 +150,7 @@ img {
 .crystallisedobsidianpattern,
 .pebblestonepattern,
 .perfectpattern,
-.randomizedpattern{
+.randomizedpattern {
   transition: ease-in-out 0.2s;
 }
 
@@ -221,4 +216,107 @@ img {
   width: 300px;
   height: 300px;
   border-radius: 20px;
+}
+
+/* footer */
+.footer {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px; /* Added padding for better spacing */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure columns are spaced evenly */
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px; /* Added padding for better spacing */
+  box-sizing: border-box; /* Ensure padding does not exceed width */
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul {
+  padding: 0; /* Ensure there's no default padding */
+  margin: 0; /* Ensure there's no default margin */
+  list-style: none;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #f0f0f0; /* Use the secondary color */
+  text-shadow: 2px 2px 5px rgba(119, 119, 119, 0.8);
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px; /* Add a slight padding on hover for effect */
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  border-radius: 30%;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-col {
+    width: 50%; /* Adjust width for smaller screens */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-col {
+    width: 100%; /* Full width on very small screens */
+  }
 }
