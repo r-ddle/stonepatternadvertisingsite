@@ -1,0 +1,224 @@
+@import 'animate.css';
+
+* {
+  margin: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+  font-family: "Oswald", sans-serif;
+  background-image: url(./assets/stoned.jpg);
+  color: white;
+}
+
+/* Navbar styles */
+.corexbar {
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(90, 89, 85, 0.38);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 1px solid rgba(90, 89, 85, 0.38);
+  font-family: "Oswald", sans-serif;
+}
+
+.corexbar .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.corexbar .logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.corexbar .container .logo a {
+  font-size: 2.5em;
+}
+
+.corexbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.corexbar .nav-links li {
+  margin-left: 20px;
+}
+
+.corexbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+
+
+.corexbar .nav-links a:hover {
+  text-shadow:0 0 5px #7e7e7e;
+}
+.corexbar .nav-links a{
+  text-decoration: none;
+  color: #c7c7c7; /* Change color to suit your design */
+  font-size: 18px; /* Adjust size as needed */
+  transition: text-shadow 0.3s ease; /* Smooth transition */
+  margin: 0 15px;
+  
+
+}
+
+/* catogory tab */
+.Corex-Wall {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.catogory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+
+/* card layout */
+.gridlayout{
+  margin-top: 15px;
+  display: grid;
+  grid-template-areas: 
+  "one two three";
+  justify-content: center;
+  gap: 60px;
+}
+
+.pattern {
+  margin: 5px;
+}
+
+.catogory-card {
+  width: 200px;
+  padding: 20px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.card h1,
+.card p {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+.card {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card p {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.barstonepattern:hover .card,
+.classicstonepattern:hover .card,
+.crystallisedobsidianpattern:hover .card,
+.pebblestonepattern:hover .card,
+.perfectpattern:hover .card,
+.randomizedpattern:hover .card {
+  padding: 20px 20px 60px;
+}
+
+.barstonepattern:hover,
+.classicstonepattern:hover,
+.crystallisedobsidianpattern:hover,
+.pebblestonepattern:hover,
+.perfectpattern:hover,
+.randomizedpattern:hover{
+  transform: scale(1.1);
+}
+
+.barstonepattern,
+.classicstonepattern,
+.crystallisedobsidianpattern,
+.pebblestonepattern,
+.perfectpattern,
+.randomizedpattern{
+  transition: ease-in-out 0.2s;
+}
+
+.barstonepattern:hover p,
+.classicstonepattern:hover p,
+.crystallisedobsidianpattern:hover p,
+.pebblestonepattern:hover p,
+.perfectpattern:hover p,
+.randomizedpattern:hover p {
+  display: block;
+  opacity: 1;
+}
+
+.barstonepattern {
+  background: url(assets/barstonepattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.classicstonepattern {
+  background: url(assets/classicstonepattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.crystallisedobsidianpattern {
+  background: url(assets/crystallisedobsidianpattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.pebblestonepattern {
+  background: url(assets/pebblestonepattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.perfectpattern {
+  background: url(assets/perfectpattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.randomizedpattern {
+  background: url(assets/randomizedpattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
