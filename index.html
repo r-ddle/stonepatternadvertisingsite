@@ -16,12 +16,17 @@
       rel="stylesheet"
     />
   </head>
+  <body>
 
-  <!--navbar-->
   <nav class="corexbar">
     <div class="container">
       <div class="logo">
         <a href="#">Corex</a>
+      </div>
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <ul class="nav-links">
         <li><a href="#">Contact</a></li>
@@ -30,6 +35,7 @@
       </ul>
     </div>
   </nav>
+
 
   <!-- wall part -->
   <div class="Corex-Wall">
@@ -125,5 +131,16 @@
     </div>
   </footer>
 
-  <body></body>
+  <script>
+  const menuIcon = document.querySelector('.menu-icon');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+
+  </script>
+  </body>
+
 </html>

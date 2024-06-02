@@ -25,6 +25,8 @@ body {
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(90, 89, 85, 0.38);
   font-family: "Oswald", sans-serif;
+  position: relative;
+  z-index: 10;
 }
 
 .corexbar .container {
@@ -39,17 +41,16 @@ body {
 .corexbar .logo a {
   color: white;
   text-decoration: none;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.corexbar .container .logo a {
   font-size: 2.5em;
+  font-weight: bold;
 }
 
 .corexbar .nav-links {
   list-style: none;
   display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .corexbar .nav-links li {
@@ -60,18 +61,66 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.2em;
+  transition: text-shadow 0.3s ease;
 }
 
 .corexbar .nav-links a:hover {
   text-shadow: 0 0 5px #7e7e7e;
 }
-.corexbar .nav-links a {
-  text-decoration: none;
-  color: #e6e6e6;
-  font-size: 18px;
-  transition: text-shadow 0.3s ease;
-  margin: 0 15px;
+
+.corexbar .menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
+
+.corexbar .menu-icon span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .corexbar .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(90, 89, 85, 0.9);
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .corexbar .nav-links li {
+    margin: 15px 0;
+  }
+
+  .corexbar .nav-links.active {
+    max-height: 500px; 
+  }
+
+  .corexbar .menu-icon {
+    display: flex;
+  }
+
+  .corexbar .logo a {
+    font-size: 2em;
+  }
+}
+
+
+
+
+
+
 
 /* catogory tab */
 .Corex-Wall {
@@ -218,6 +267,149 @@ img {
   border-radius: 20px;
 }
 
+/* Media Query for Mobile  */
+@media (max-width: 768px) {
+  .gridlayout {
+    grid-template-areas: "one" "two" "three";
+  }
+}
+
+/* card layout */
+.gridlayout {
+  margin-top: 15px;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pattern {
+  margin: 5px;
+}
+
+.catogory-card {
+  width: 200px;
+  padding: 20px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.card h1,
+.card p {
+  color: white;
+  text-shadow: 2px 5px 5px rgba(20, 20, 20, 0.8);
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card p {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.barstonepattern:hover .card,
+.classicstonepattern:hover .card,
+.crystallisedobsidianpattern:hover .card,
+.pebblestonepattern:hover .card,
+.perfectpattern:hover .card,
+.randomizedpattern:hover .card {
+  padding: 20px 20px 60px;
+}
+
+.barstonepattern:hover,
+.classicstonepattern:hover,
+.crystallisedobsidianpattern:hover,
+.pebblestonepattern:hover,
+.perfectpattern:hover,
+.randomizedpattern:hover {
+  transform: scale(1.1);
+}
+
+.barstonepattern,
+.classicstonepattern,
+.crystallisedobsidianpattern,
+.pebblestonepattern,
+.perfectpattern,
+.randomizedpattern {
+  transition: ease-in-out 0.2s;
+}
+
+.barstonepattern:hover p,
+.classicstonepattern:hover p,
+.crystallisedobsidianpattern:hover p,
+.pebblestonepattern:hover p,
+.perfectpattern:hover p,
+.randomizedpattern:hover p {
+  display: block;
+  opacity: 1;
+}
+
+.barstonepattern {
+  background: url(assets/barstonepattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.classicstonepattern {
+  background: url(assets/classicstonepattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.crystallisedobsidianpattern {
+  background: url(assets/crystallisedobsidianpattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.pebblestonepattern {
+  background: url(assets/pebblestonepattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.perfectpattern {
+  background: url(assets/perfectpattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.randomizedpattern {
+  background: url(assets/randomizedpattern.webp);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
 /* footer */
 .footer {
   background: rgba(0, 0, 0, 0.2);
@@ -232,19 +424,19 @@ img {
 .container {
   max-width: 1170px;
   margin: auto;
-  padding: 0 15px; /* Added padding for better spacing */
+  padding: 0 15px; 
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Ensure columns are spaced evenly */
+  justify-content: space-between; 
 }
 
 .footer-col {
   width: 25%;
-  padding: 0 15px; /* Added padding for better spacing */
-  box-sizing: border-box; /* Ensure padding does not exceed width */
+  padding: 0 15px; 
+  box-sizing: border-box; 
 }
 
 .footer-col h4 {
@@ -261,15 +453,15 @@ img {
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: #e91e63;
+  background-color: #d82662;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
 }
 
 .footer-col ul {
-  padding: 0; /* Ensure there's no default padding */
-  margin: 0; /* Ensure there's no default margin */
+  padding: 0; 
+  margin: 0; 
   list-style: none;
 }
 
@@ -280,7 +472,7 @@ img {
 .footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
-  color: #f0f0f0; /* Use the secondary color */
+  color: #f0f0f0; 
   text-shadow: 2px 2px 5px rgba(119, 119, 119, 0.8);
   text-decoration: none;
   font-weight: 300;
@@ -290,7 +482,7 @@ img {
 
 .footer-col ul li a:hover {
   color: #ffffff;
-  padding-left: 8px; /* Add a slight padding on hover for effect */
+  padding-left: 8px; /*  hover  */
 }
 
 .footer-col .social-links a {
@@ -310,13 +502,13 @@ img {
 
 @media (max-width: 768px) {
   .footer-col {
-    width: 50%; /* Adjust width for smaller screens */
+    width: 50%; 
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .footer-col {
-    width: 100%; /* Full width on very small screens */
+    width: 100%; 
   }
 }
